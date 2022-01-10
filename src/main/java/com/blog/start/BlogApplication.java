@@ -1,13 +1,13 @@
-package com.javacourse.javacourse;
+package com.blog.start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JavacourseApplication {
+public class BlogApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JavacourseApplication.class, args);
+        SpringApplication.run(BlogApplication.class, args);
     }
 
 }

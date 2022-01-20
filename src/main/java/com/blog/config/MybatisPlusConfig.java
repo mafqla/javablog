@@ -9,13 +9,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * MybatisPlus 配置类
+ * 分页设置
  * @author fuqianlin
  * @date 2022-1-15
  */
 @EnableTransactionManagement
 @Configuration
 public class MybatisPlusConfig {
-
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();

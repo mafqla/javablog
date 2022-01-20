@@ -1,19 +1,20 @@
 package com.blog.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.blog.dao.UserRoleDao;
+import com.blog.dao.UserRoleMapper;
 import com.blog.entity.UserRole;
 import com.blog.service.UserRoleService;
 import org.springframework.stereotype.Service;
 
+
 /**
- * (UserRole)表服务实现类
+ * 用户角色服务
  *
- * @author makejava
- * @since 2022-01-15 17:49:18
+ * @author fuqianlin
+ * @date 2022-01-20
  */
-@Service("userRoleService")
-public class UserRoleServiceImpl extends ServiceImpl<UserRoleDao, UserRole> implements UserRoleService {
+@Service
+public class UserRoleServiceImpl extends ServiceImpl<UserRoleMapper, UserRole> implements UserRoleService {
+
 
 }
-

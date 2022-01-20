@@ -2,14 +2,50 @@ package com.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.blog.entity.Message;
+import com.blog.model.dto.MessageBackDTO;
+import com.blog.model.dto.MessageDTO;
+import com.blog.model.vo.ConditionVO;
+import com.blog.model.vo.MessageVO;
+import com.blog.model.vo.PageResult;
+import com.blog.model.vo.ReviewVO;
+
+import java.util.List;
 
 /**
- * (Message)表服务接口
+ * 留言服务
  *
- * @author makejava
- * @since 2022-01-15 17:49:17
+ * @author fuqianlin
+ * @date 2022-01-20
  */
 public interface MessageService extends IService<Message> {
 
-}
+    /**
+     * 添加留言弹幕
+     *
+     * @param messageVO 留言对象
+     */
+    void saveMessage(MessageVO messageVO);
 
+    /**
+     * 查看留言弹幕
+     *
+     * @return 留言列表
+     */
+    List<MessageDTO> listMessages();
+
+    /**
+     * 审核留言
+     *
+     * @param reviewVO 审查签证官
+     */
+    void updateMessagesReview(ReviewVO reviewVO);
+
+    /**
+     * 查看后台留言
+     *
+     * @param condition 条件
+     * @return 留言列表
+     */
+    PageResult<MessageBackDTO> listMessageBackDTO(ConditionVO condition);
+
+}

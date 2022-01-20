@@ -2,14 +2,54 @@ package com.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.blog.entity.Resource;
+import com.blog.model.dto.LabelOptionDTO;
+import com.blog.model.dto.ResourceDTO;
+import com.blog.model.vo.ConditionVO;
+import com.blog.model.vo.ResourceVO;
+
+import java.util.List;
+
 
 /**
- * (Resource)表服务接口
+ * 资源服务
  *
- * @author makejava
- * @since 2022-01-15 17:49:17
+ * @author fuqianlin
+ * @date 2022-01-20
  */
 public interface ResourceService extends IService<Resource> {
 
-}
+    /**
+     * 导入swagger权限
+     */
+    void importSwagger();
 
+    /**
+     * 添加或修改资源
+     *
+     * @param resourceVO 资源对象
+     */
+    void saveOrUpdateResource(ResourceVO resourceVO);
+
+    /***
+     * 删除资源
+     *
+     @param resourceId 资源id
+     */
+    void deleteResource(Integer resourceId);
+
+    /**
+     * 查看资源列表
+     *
+     * @param conditionVO 条件
+     * @return 资源列表
+     */
+    List<ResourceDTO> listResources(ConditionVO conditionVO);
+
+    /**
+     * 查看资源选项
+     *
+     * @return 资源选项
+     */
+    List<LabelOptionDTO> listResourceOption();
+
+}

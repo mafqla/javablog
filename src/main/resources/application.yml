@@ -31,8 +31,8 @@ spring:
   # 邮箱配置
   mail:
     host: smtp.qq.com
-    username: sendmail_post@qq.com
-    password: aepsgqiqppfqeacg
+    username:
+    password:
     default-encoding: UTF-8
     port: 587
     properties:
@@ -61,12 +61,12 @@ search:
 
 # 上传模式 可选 oss或local  （/一定不能去！！！）
 upload:
-  mode: oss
+  mode: local
   local:
     # nginx映射本地文件路径，无域名则为 ip +端口
     url: http://你的文件上传子域名/
     # 本地文件存储路径
-    path: /usr/local/upload/
+    path: /image/upload/
   oss:
     #    url: https://OSS域名/
     #    endpoint: OSS配置endpoint

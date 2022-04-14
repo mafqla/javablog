@@ -1,5 +1,5 @@
 server:
-  port: 8080  #修改端口号
+  port: 8090  #修改端口号
   servlet:
     session:
       timeout: 21600
@@ -31,8 +31,8 @@ spring:
   # 邮箱配置
   mail:
     host: smtp.qq.com
-    username:
-    password:
+    username: sendmail_post@qq.com
+    password: aepsgqiqppfqeacg
     default-encoding: UTF-8
     port: 587
     properties:
@@ -64,9 +64,9 @@ upload:
   mode: local
   local:
     # nginx映射本地文件路径，无域名则为 ip +端口
-    url: http://你的文件上传子域名/
+    url: http://127.0.0.1:8080/
     # 本地文件存储路径
-    path: /image/upload/
+    path: /image/upload
   oss:
     #    url: https://OSS域名/
     #    endpoint: OSS配置endpoint

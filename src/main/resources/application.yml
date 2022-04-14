@@ -1,5 +1,5 @@
 server:
-  port: 8080  #修改端口号
+  port: 8090  #修改端口号
   servlet:
     session:
       timeout: 21600
